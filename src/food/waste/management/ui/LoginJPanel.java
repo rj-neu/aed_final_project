@@ -111,7 +111,7 @@ public class LoginJPanel extends javax.swing.JPanel {
 
         jTextField3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jTextField3.setForeground(new java.awt.Color(255, 204, 204));
-        jTextField3.setText("  HELP  FEED HUNGER");
+        jTextField3.setText("    HELP FEED NEEDY");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
