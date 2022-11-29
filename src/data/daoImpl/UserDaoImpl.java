@@ -23,7 +23,7 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public void create(User user) {
-        String sql = "INSERT INTO User " + "(name, email, password, gender, role, dateOfBirth) VALUES (?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO User(name, email, password, gender, role, dateOfBirth) VALUES (?, ?, ?, ?, ?, ?)";
         Connection conn = null;
 
         try {
