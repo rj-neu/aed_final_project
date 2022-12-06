@@ -130,8 +130,8 @@ public class WorkerWorkAreaJPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnDeliveryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeliveryActionPerformed
-        LogisticsWorkerDeliveryJPanel logsiticsWorkerDeliveryJPanel = new LogisticsWorkerDeliveryJPanel(userProcessContainer, account, enterprise, network);
-        userProcessContainer.add("LogsiticsWorkerDeliveryJPanel", logsiticsWorkerDeliveryJPanel);
+        WorkerDeliveryJPanel logsiticsWorkerDeliveryJPanel = new WorkerDeliveryJPanel(userProcessContainer, account, enterprise, network);
+        userProcessContainer.add("WorkerDeliveryJPanel", logsiticsWorkerDeliveryJPanel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
     }//GEN-LAST:event_btnDeliveryActionPerformed

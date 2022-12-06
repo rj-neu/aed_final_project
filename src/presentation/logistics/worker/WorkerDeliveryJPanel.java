@@ -20,7 +20,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author indap.n
  */
-public class LogisticsWorkerDeliveryJPanel extends javax.swing.JPanel {
+public class WorkerDeliveryJPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form LogisticsWorkerDeliveryJPanel
@@ -30,7 +30,7 @@ public class LogisticsWorkerDeliveryJPanel extends javax.swing.JPanel {
     private Enterprise enterprise;
     private Network network;
 
-    public LogisticsWorkerDeliveryJPanel(JPanel userProcessContainer, UserAccount account, Enterprise enterprise, Network network) {
+    public WorkerDeliveryJPanel(JPanel userProcessContainer, UserAccount account, Enterprise enterprise, Network network) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.account = account;
@@ -161,7 +161,7 @@ public class LogisticsWorkerDeliveryJPanel extends javax.swing.JPanel {
             CollectionWorkRequest request = (CollectionWorkRequest) tblLogisticsWorker.getValueAt(selectedRow, 5);
             if (request.getStatus().equals(RequestStatus.getPickupStatusMessage(4))) {
 
-                LogisticsWorkerDeliveryDetailsJPanel logisticsWorkerDeliveryDetailsJPanel = new LogisticsWorkerDeliveryDetailsJPanel(userProcessContainer, account, enterprise, request, network);
+                WorkerDeliveryDetailsJPanel logisticsWorkerDeliveryDetailsJPanel = new WorkerDeliveryDetailsJPanel(userProcessContainer, account, enterprise, request, network);
                 userProcessContainer.add("LogisticsWorkerDeliveryDetailsJPanel", logisticsWorkerDeliveryDetailsJPanel);
                 CardLayout layout = (CardLayout) userProcessContainer.getLayout();
                 layout.next(userProcessContainer);

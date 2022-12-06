@@ -12,7 +12,6 @@ import business.organization.Organization;
 import business.role.Role;
 import business.userAccount.UserAccount;
 import javax.swing.JPanel;
-import userInterface.restaurant.managerWorkArea.RestaurantManagerWorkAreaJPanel;
 
 /**
  *

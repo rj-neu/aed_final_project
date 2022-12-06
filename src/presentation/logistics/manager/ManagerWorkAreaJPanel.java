@@ -160,8 +160,8 @@ public class ManagerWorkAreaJPanel extends javax.swing.JPanel {
 
     private void btnRestaurantRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRestaurantRequestActionPerformed
         // TODO add your handling code here:
-        LogisticsManagerViewRequestsJPanel logisticsManagerViewRequestsJPanel = new LogisticsManagerViewRequestsJPanel(userProcessContainer, account, organization, enterprise);
-        userProcessContainer.add("LogisticsManagerViewRequestsJPanel", logisticsManagerViewRequestsJPanel);
+        ManagerViewRequestsJPanel logisticsManagerViewRequestsJPanel = new ManagerViewRequestsJPanel(userProcessContainer, account, organization, enterprise);
+        userProcessContainer.add("ManagerViewRequestsJPanel", logisticsManagerViewRequestsJPanel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
     }//GEN-LAST:event_btnRestaurantRequestActionPerformed
@@ -183,10 +183,10 @@ public class ManagerWorkAreaJPanel extends javax.swing.JPanel {
 
     private void btnPayementInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPayementInfoActionPerformed
         // TODO add your handling code here:
-        LogisticsManagerViewChartJPanel logisticsManagerViewChartJPanel = new LogisticsManagerViewChartJPanel(userProcessContainer, account);
-        userProcessContainer.add("LogisticsManagerViewChartJPanel", logisticsManagerViewChartJPanel);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
+//        ManagerViewChartJPanel logisticsManagerViewChartJPanel = new ManagerViewChartJPanel(userProcessContainer, account);
+//        userProcessContainer.add("ManagerViewChartJPanel", logisticsManagerViewChartJPanel);
+//        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+//        layout.next(userProcessContainer);
     }//GEN-LAST:event_btnPayementInfoActionPerformed
 
 

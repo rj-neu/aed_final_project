@@ -162,7 +162,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
 
     private void btnManageOrganizationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageOrganizationActionPerformed
 
-        LogisticsManageOrganizationJPanel manageLogisticsOrganizationJPanel = new LogisticsManageOrganizationJPanel(userProcessContainer, enterprise.getOrganizationDirectory());
+        ManageOrganizationJPanel manageLogisticsOrganizationJPanel = new ManageOrganizationJPanel(userProcessContainer, enterprise.getOrganizationDirectory());
         userProcessContainer.add("manageLogisticsOrganizationJPanel", manageLogisticsOrganizationJPanel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
@@ -170,7 +170,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
 
     private void btnManageEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageEmployeeActionPerformed
 
-        LogisticsManageEmployeeJPanel manageLogisticsEmployeeJPanel = new LogisticsManageEmployeeJPanel(userProcessContainer, enterprise.getOrganizationDirectory());
+        ManageEmployeeJPanel manageLogisticsEmployeeJPanel = new ManageEmployeeJPanel(userProcessContainer, enterprise.getOrganizationDirectory());
         userProcessContainer.add("manageLogisticsEmployeeJPanel", manageLogisticsEmployeeJPanel);
 
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
@@ -180,7 +180,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
 
     private void btnManageUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageUserActionPerformed
         // TODO add your handling code here:
-        LogisticsManageUserAccountJPanel manageLogisticsUserAccountJPanel = new LogisticsManageUserAccountJPanel(userProcessContainer, enterprise);
+        ManageUserAccountJPanel manageLogisticsUserAccountJPanel = new ManageUserAccountJPanel(userProcessContainer, enterprise);
         userProcessContainer.add("manageLogisticsUserAccountJPanel", manageLogisticsUserAccountJPanel);
 
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();

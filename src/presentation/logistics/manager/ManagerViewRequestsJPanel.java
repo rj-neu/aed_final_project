@@ -283,8 +283,8 @@ public class ManagerViewRequestsJPanel extends javax.swing.JPanel {
         } else {
             CollectionWorkRequest request = (CollectionWorkRequest) tblRequests.getValueAt(selectedRow, 3);
 
-            LogisticsManagerViewRequestDetailsJPanel logisticsManagerViewRequestDetailsJPanel = new LogisticsManagerViewRequestDetailsJPanel(userProcessContainer, request);
-            userProcessContainer.add("LogisticsManagerViewRequestDetailsJPanel", logisticsManagerViewRequestDetailsJPanel);
+            ManagerViewRequestDetailsJPanel logisticsManagerViewRequestDetailsJPanel = new ManagerViewRequestDetailsJPanel(userProcessContainer, request);
+            userProcessContainer.add("ManagerViewRequestDetailsJPanel", logisticsManagerViewRequestDetailsJPanel);
             CardLayout layout = (CardLayout) userProcessContainer.getLayout();
             layout.next(userProcessContainer);
         }
