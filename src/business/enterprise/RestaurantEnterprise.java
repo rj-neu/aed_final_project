@@ -18,6 +18,7 @@ public class RestaurantEnterprise extends Enterprise {
         super(name, EnterpriseType.Restaurant);
     }
 
+    
     @Override
     public ArrayList<Role> getSupportedRole() {
         return null;
