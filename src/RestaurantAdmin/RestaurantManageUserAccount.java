@@ -17,10 +17,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author indap.n
- */
+
 public class RestaurantManageUserAccount extends javax.swing.JPanel {
 
     /**
@@ -110,7 +107,7 @@ public class RestaurantManageUserAccount extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(102, 204, 255));
+        setBackground(new java.awt.Color(51, 204, 255));
 
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
 
