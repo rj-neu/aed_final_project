@@ -8,12 +8,13 @@ package business.enterprise;
 import business.enterprise.Enterprise.EnterpriseType;
 import java.util.ArrayList;
 
+
+
 /**
  *
- * @author indap.n
+ * @author Tanvi
  */
 public class EnterpriseDirectory {
-
     private ArrayList<Enterprise> enterpriseList;
 
     public EnterpriseDirectory() {
@@ -33,13 +34,7 @@ public class EnterpriseDirectory {
         Enterprise enterprise = null;
         if (type == EnterpriseType.Restaurant) {
             enterprise = new RestaurantEnterprise(name);
-        } else if (type == EnterpriseType.Logistics) {
-            enterprise = new LogisticsEnterprise(name);
-        } else if (type == EnterpriseType.NGO) {
-            enterprise = new NGOEnterprise(name);
-        } else if (type == EnterpriseType.Government) {
-            enterprise = new GovernmentEnterprise(name);
-        }
+        } 
 
         enterpriseList.add(enterprise);
         return enterprise;
@@ -57,5 +52,4 @@ public class EnterpriseDirectory {
         }
         return false;
     }
-
 }

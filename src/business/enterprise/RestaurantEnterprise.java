@@ -10,17 +10,18 @@ import java.util.ArrayList;
 
 /**
  *
- * @author indap.n
+ * @author Tanvi
  */
 public class RestaurantEnterprise extends Enterprise {
-
+   
     public RestaurantEnterprise(String name) {
         super(name, EnterpriseType.Restaurant);
     }
 
+    
     @Override
     public ArrayList<Role> getSupportedRole() {
         return null;
     }
-
+    
 }
