@@ -9,7 +9,7 @@ import business.enterprise.EnterpriseDirectory;
 
 /**
  *
- * @author indap.n
+ * @author Rishabh
  */
 public class Network {
     

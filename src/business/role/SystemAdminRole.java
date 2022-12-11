@@ -16,7 +16,7 @@ import javax.swing.*;
 
 /**
  *
- * @author indap.n
+ * @author Rishabh
  */
 public class SystemAdminRole extends Role{
 

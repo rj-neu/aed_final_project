@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author indap.n
+ * @author Rishabh
  */
 public class Distributed {
 

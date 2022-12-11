@@ -7,7 +7,7 @@ package business.util.request;
 
 /**
  *
- * @author indap.n
+ * @author Rishabh
  */
 public class RequestItem {
     

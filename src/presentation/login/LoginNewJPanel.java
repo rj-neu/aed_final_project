@@ -47,6 +47,9 @@ public class LoginNewJPanel extends javax.swing.JFrame implements Runnable {
         setResizable(false);
         setVisible(true);
 
+        System.out.println((int) screenSize.width / 1.3);
+        System.out.println((int) screenSize.height / 1.3);
+
 
         system = dB4OUtil.retrieveSystem();
         RequestStatus.initalizePickupRequestStatusMap();

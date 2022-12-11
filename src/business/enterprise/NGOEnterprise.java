@@ -14,7 +14,7 @@ package business.enterprise;
 
 /**
  *
- * @author indap.n
+ * @author Rishabh
  */
 public class NGOEnterprise extends Enterprise {
 

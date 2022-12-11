@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author indap.n
+ * @author Rishabh
  */
 public class LogisticsAdminOrganization extends Organization{
 

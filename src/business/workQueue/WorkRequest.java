@@ -11,7 +11,7 @@ import java.util.Date;
 
 /**
  *
- * @author indap.n
+ * @author Rishabh
  */
 public abstract class WorkRequest {
     

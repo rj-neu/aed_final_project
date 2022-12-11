@@ -14,7 +14,7 @@ import java.security.NoSuchAlgorithmException;
 
 /**
  *
- * @author indap.n
+ * @author Rishabh
  */
 public class UserAccount {
     

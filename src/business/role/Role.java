@@ -15,7 +15,7 @@ import javax.swing.*;
 
 /**
  *
- * @author indap.n
+ * @author Rishabh
  */
 public abstract class Role {
 

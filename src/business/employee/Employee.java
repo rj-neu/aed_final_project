@@ -7,7 +7,7 @@ package business.employee;
 
 /**
  *
- * @author indap.n
+ * @author Rishabh
  */
 public class Employee {
     

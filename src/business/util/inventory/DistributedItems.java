@@ -9,7 +9,7 @@ import business.util.request.RequestItem;
 
 /**
  *
- * @author indap.n
+ * @author Rishabh
  */
 public class DistributedItems {
 

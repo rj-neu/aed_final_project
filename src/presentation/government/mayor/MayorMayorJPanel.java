@@ -14,7 +14,7 @@ import java.awt.*;
 
 /**
  *
- * @author indap.n
+ * @author Rishabh
  */
 public class MayorMayorJPanel extends javax.swing.JPanel {
 

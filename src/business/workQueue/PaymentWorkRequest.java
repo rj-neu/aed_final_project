@@ -7,7 +7,7 @@ package business.workQueue;
 
 /**
  *
- * @author indap.n
+ * @author Rishabh
  */
 public class PaymentWorkRequest extends WorkRequest{
     

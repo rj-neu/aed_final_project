@@ -30,7 +30,7 @@ import java.util.TreeMap;
 
 /**
  *
- * @author indap.n
+ * @author Rishabh
  */
 public class ViewWastageAvoidedByRestaurantsJPanel extends javax.swing.JPanel {
 
