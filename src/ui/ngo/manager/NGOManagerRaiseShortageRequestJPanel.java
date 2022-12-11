@@ -1,20 +1,46 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package ui.ngo.manager;
+
+import business.enterprise.Enterprise;
+import business.enterprise.NGOEnterprise;
+import business.network.Network;
+import business.organization.Organization;
+import business.organization.ngo.NGOManagerOrganization;
+import business.role.Role;
+import business.userAccount.UserAccount;
+import business.util.request.RequestStatus;
+import business.workQueue.ShortageWorkRequest;
+import business.workQueue.WorkRequest;
+import java.awt.CardLayout;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 /**
  *
  * @author Shubham Idekar
  */
-public class NGOmanagerRaiseShortageReqPanel extends javax.swing.JPanel {
+public class NGOManagerRaiseShortageRequestJPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form NGOmanagerRaiseShortageReqPanel
+     * Creates new form RegionRequestJPanel
      */
-    public NGOmanagerRaiseShortageReqPanel() {
+    private JPanel userProcessContainer;
+    private NGOEnterprise enterprise;
+    private UserAccount account;
+    private Network network;
+    private boolean hasShortage = false;
+
+    public NGOManagerRaiseShortageRequestJPanel(JPanel userProcessContainer, UserAccount account, NGOEnterprise enterprise, Network network) {
         initComponents();
+        this.userProcessContainer = userProcessContainer;
+        this.enterprise = enterprise;
+        this.account = account;
+        this.network = network;
+        populateEmployeeDropDown();
     }
 
     /**
@@ -101,7 +127,7 @@ public class NGOmanagerRaiseShortageReqPanel extends javax.swing.JPanel {
                         .addComponent(lblEmployee)
                         .addGap(18, 18, 18)
                         .addComponent(cmbEmployee, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -128,7 +154,7 @@ public class NGOmanagerRaiseShortageReqPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnBack)
                     .addComponent(btnRaise))
-                .addContainerGap(83, Short.MAX_VALUE))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -186,7 +212,15 @@ public class NGOmanagerRaiseShortageReqPanel extends javax.swing.JPanel {
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_btnBackActionPerformed
-
+    public void populateEmployeeDropDown() {
+        for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()) {
+            for (UserAccount user : organization.getUserAccountDirectory().getUserAccountList()) {
+                if (user.getRole().getRoleType().getValue().equals(Role.RoleType.NGOWorker.getValue())) {
+                    cmbEmployee.addItem(user);
+                }
+            }
+        }
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;

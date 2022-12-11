@@ -1,20 +1,41 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package ui.ngo.manager;
+
+import business.organization.Organization;
+import business.userAccount.UserAccount;
+import business.util.request.RequestStatus;
+import static business.util.request.RequestStatus.pickupRequestStatusList;
+import business.workQueue.CollectionWorkRequest;
+import business.workQueue.PaymentWorkRequest;
+import business.workQueue.WorkRequest;
+import java.awt.CardLayout;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
  * @author Shubham Idekar
  */
-public class NGOmanagerPayInvoivePanel extends javax.swing.JPanel {
+public class NGOManagerPayInvoiceJPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form NGOmanagerPayInvoivePanel
+     * Creates new form NGOManagerPayInvoiceJPanel
      */
-    public NGOmanagerPayInvoivePanel() {
+    private JPanel userProcessContainer;
+    private Organization organization;
+    private UserAccount account;
+
+    public NGOManagerPayInvoiceJPanel(JPanel userProcessContainer, UserAccount account, Organization organization) {
         initComponents();
+        this.userProcessContainer = userProcessContainer;
+        this.organization = organization;
+        this.account = account;
+        populateTable();
     }
 
     /**
@@ -30,9 +51,9 @@ public class NGOmanagerPayInvoivePanel extends javax.swing.JPanel {
         jScrollPane = new javax.swing.JScrollPane();
         tblDetails = new javax.swing.JTable();
         btnBack = new javax.swing.JButton();
-        btnPay = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        btnPay = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 153, 153));
 
@@ -65,6 +86,10 @@ public class NGOmanagerPayInvoivePanel extends javax.swing.JPanel {
             }
         });
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/ngo/manager/res/money.png"))); // NOI18N
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/ngo/manager/res/debit-card.png"))); // NOI18N
+
         btnPay.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
         btnPay.setText("Pay Invoice");
         btnPay.addActionListener(new java.awt.event.ActionListener() {
@@ -72,10 +97,6 @@ public class NGOmanagerPayInvoivePanel extends javax.swing.JPanel {
                 btnPayActionPerformed(evt);
             }
         });
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/ngo/manager/res/money.png"))); // NOI18N
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/ngo/manager/res/debit-card.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -97,7 +118,7 @@ public class NGOmanagerPayInvoivePanel extends javax.swing.JPanel {
                             .addComponent(btnBack)
                             .addGap(511, 511, 511)
                             .addComponent(btnPay))))
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -117,7 +138,7 @@ public class NGOmanagerPayInvoivePanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnPay)
                     .addComponent(btnBack))
-                .addContainerGap(60, Short.MAX_VALUE))
+                .addContainerGap(72, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -159,6 +180,28 @@ public class NGOmanagerPayInvoivePanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_btnPayActionPerformed
 
+    public void populateTable() {
+
+        DefaultTableModel dtm = (DefaultTableModel) tblDetails.getModel();
+        dtm.setRowCount(0);
+        for (WorkRequest wr : organization.getWorkQueue().getWorkRequestList()) {
+            if (wr instanceof PaymentWorkRequest) {
+                PaymentWorkRequest pwr = (PaymentWorkRequest) wr;
+                CollectionWorkRequest cwr = pwr.getCollectionWorkRequest();
+                if ((cwr.getStatus().equals(pickupRequestStatusList.get(5))) || (cwr.getStatus().equals(pickupRequestStatusList.get(6)))) {
+
+                    Object row[] = new Object[5];
+                    row[0] = pwr;
+                    row[1] = cwr.getResolveDate();
+                    row[2] = pwr.getStatus();
+                    row[3] = "$" + cwr.getDeliveryCost();
+                    row[4] = cwr.getPaid() ? "Yes" : "No";
+
+                    dtm.addRow(row);
+                }
+            }
+        }
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
