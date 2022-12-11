@@ -26,79 +26,178 @@ public class NGOmanagerRaiseShortageReqPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        btnRaise = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
+        cmbEmployee = new javax.swing.JComboBox();
+        lblEmployee = new javax.swing.JLabel();
+        jScrollPane = new javax.swing.JScrollPane();
         txtMessage = new javax.swing.JTextArea();
+        lblMessage = new javax.swing.JLabel();
+        lblHeader = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        cmbEmployee = new javax.swing.JComboBox<>();
-        btnRaiseReq = new javax.swing.JButton();
 
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Raise Shortage Request");
+        setBackground(new java.awt.Color(255, 153, 153));
+
+        btnRaise.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
+        btnRaise.setText("Raise Request");
+        btnRaise.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRaiseActionPerformed(evt);
+            }
+        });
+
+        btnBack.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
+        btnBack.setText("Back");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackActionPerformed(evt);
+            }
+        });
+
+        lblEmployee.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        lblEmployee.setText("Select Employee:");
 
         txtMessage.setColumns(20);
         txtMessage.setRows(5);
-        jScrollPane1.setViewportView(txtMessage);
+        jScrollPane.setViewportView(txtMessage);
 
-        jLabel2.setText("Message :");
+        lblMessage.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        lblMessage.setText("Message:");
 
-        jLabel3.setText("Select Employee :");
+        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblHeader.setText("Shortage Request");
 
-        btnRaiseReq.setText("Raise Request");
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/ngo/manager/res/lack.png"))); // NOI18N
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/ngo/manager/res/request.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel2))
+                        .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(cmbEmployee, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE))
-                        .addGap(115, 191, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btnRaiseReq, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(4, 4, 4)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnBack)
+                                .addGap(142, 142, 142)
+                                .addComponent(btnRaise))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblEmployee)
+                        .addGap(18, 18, 18)
+                        .addComponent(cmbEmployee, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(14, 14, 14)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblMessage)
+                    .addComponent(jScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
+                    .addComponent(lblEmployee, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cmbEmployee, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(btnRaiseReq, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(112, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnBack)
+                    .addComponent(btnRaise))
+                .addContainerGap(83, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnRaiseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRaiseActionPerformed
+        // TODO add your handling code here:
+        if (txtMessage.getText() == "" || txtMessage.getText() == null) {
+            JOptionPane.showMessageDialog(null, "Please enter a message");
+            return;
+        }
+        if (cmbEmployee.getSelectedItem() == null) {
+            JOptionPane.showMessageDialog(null, "Please select an employee to assign the request to");
+            return;
+        }
+        for (WorkRequest wr : account.getWorkQueue().getWorkRequestList()) {
+            if (wr instanceof ShortageWorkRequest) {
+                ShortageWorkRequest sr = (ShortageWorkRequest) wr;
+                if (sr.getStatus().equals(RequestStatus.getShortageStatusMessage(1))) {
+                    hasShortage = true;
+                    break;
+                }
+            }
+        }
+        if (hasShortage == false) {
+            ShortageWorkRequest swr = new ShortageWorkRequest();
+            swr.setSender(account);
+            swr.setMessage(txtMessage.getText());
+            swr.setStatus(RequestStatus.getShortageStatusMessage(1));
+            swr.setNgoName(enterprise.getName());
+            swr.setAssignToEmployee((UserAccount) cmbEmployee.getSelectedItem());
+
+            for (Enterprise e : network.getEnterpriseDirectory().getEnterpriseList()) {
+                if (!e.getName().equals(enterprise.getName())) {
+                    for (Organization o : e.getOrganizationDirectory().getOrganizationList()) {
+                        if (o instanceof NGOManagerOrganization) {
+                            o.getWorkQueue().getWorkRequestList().add(swr);
+                        }
+                    }
+                }
+            }
+
+            JOptionPane.showMessageDialog(null, "Shortage request sucessfully raised");
+            account.getWorkQueue().getWorkRequestList().add(swr);
+            txtMessage.setText("");
+
+        } else {
+            JOptionPane.showMessageDialog(null, "Already sent a request");
+            txtMessage.setText("");
+            return;
+        }
+    }//GEN-LAST:event_btnRaiseActionPerformed
+
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+        // TODO add your handling code here:
+        userProcessContainer.remove(this);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
+    }//GEN-LAST:event_btnBackActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnRaiseReq;
-    private javax.swing.JComboBox<String> cmbEmployee;
+    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnRaise;
+    private javax.swing.JComboBox cmbEmployee;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane;
+    private javax.swing.JLabel lblEmployee;
+    private javax.swing.JLabel lblHeader;
+    private javax.swing.JLabel lblMessage;
     private javax.swing.JTextArea txtMessage;
     // End of variables declaration//GEN-END:variables
 }
