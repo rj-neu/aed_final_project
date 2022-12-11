@@ -22,10 +22,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author mites
- */
+
 public class RestaurantWorkerRaiseRequestJPanel extends javax.swing.JPanel {
 
     private JPanel userProcessContainer;

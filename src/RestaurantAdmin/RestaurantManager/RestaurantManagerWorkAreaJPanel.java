@@ -14,10 +14,7 @@ import business.workQueue.WorkRequest;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 
-/**
- *
- * @author mites
- */
+
 public class RestaurantManagerWorkAreaJPanel extends javax.swing.JPanel {
 
     private JPanel userProcessContainer;

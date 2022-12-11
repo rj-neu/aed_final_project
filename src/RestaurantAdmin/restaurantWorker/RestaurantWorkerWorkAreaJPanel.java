@@ -13,10 +13,7 @@ import business.workQueue.WorkRequest;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 
-/**
- *
- * @author indap.n
- */
+
 public class RestaurantWorkerWorkAreaJPanel extends javax.swing.JPanel {
 
     private JPanel userProcessContainer;

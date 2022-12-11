@@ -11,10 +11,7 @@ import java.awt.CardLayout;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author indap.n
- */
+
 public class RestaurantManagerViewLogItemJPanel extends javax.swing.JPanel {
 
     private JPanel userProcessContainer;

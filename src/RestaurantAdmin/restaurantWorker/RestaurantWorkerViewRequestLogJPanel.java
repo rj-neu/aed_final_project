@@ -13,10 +13,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author indap.n
- */
+
 public class RestaurantWorkerViewRequestLogJPanel extends javax.swing.JPanel {
 
     private JPanel userProcessContainer;
@@ -65,7 +62,7 @@ public class RestaurantWorkerViewRequestLogJPanel extends javax.swing.JPanel {
         btnBack = new javax.swing.JButton();
         btnViewRequestItem = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(255, 204, 153));
+        setBackground(new java.awt.Color(102, 204, 255));
 
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         lblHeader.setText("Restaurant Worker Work Area - Request Log");
@@ -124,7 +121,7 @@ public class RestaurantWorkerViewRequestLogJPanel extends javax.swing.JPanel {
                             .addComponent(jScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 675, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(106, 106, 106)
-                        .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 539, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 567, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
