@@ -5,11 +5,12 @@
  */
 package business.enterprise;
 
-import business.role.Role;
-import business.util.inventory.Inventory;
-import business.util.inventory.Distributed;
-import business.util.request.RequestItem;
-import java.util.ArrayList;
+    import business.role.Role;
+    import business.util.inventory.Distributed;
+    import business.util.inventory.Inventory;
+    import business.util.request.RequestItem;
+
+    import java.util.ArrayList;
 
 /**
  *

@@ -11,8 +11,9 @@ import business.network.Network;
 import business.organization.Organization;
 import business.role.Role;
 import business.userAccount.UserAccount;
-import javax.swing.JPanel;
-import userInterface.government.governmentMayor.GovernmentMayorWorkAreaJPanel;
+import presentation.government.mayor.MayorMayorJPanel;
+
+import javax.swing.*;
 
 /**
  *
@@ -26,7 +27,7 @@ public class GovernmentMayorRole extends Role {
 
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, Network network) {
-        return new GovernmentMayorWorkAreaJPanel(userProcessContainer, account, network);
+        return new MayorMayorJPanel(userProcessContainer, account, network);
     }
 
 }

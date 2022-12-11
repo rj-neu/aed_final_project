@@ -8,14 +8,15 @@ package presentation.logistics.admin;
 import business.organization.Organization;
 import business.organization.Organization.Type;
 import business.organization.OrganizationDirectory;
-import java.awt.CardLayout;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
+
+
+import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import java.awt.*;
 
 /**
  *
- * @author mites
+ * @author Rishabh
  */
 public class ManageOrganizationJPanel extends javax.swing.JPanel {
 

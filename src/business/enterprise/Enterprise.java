@@ -10,15 +10,12 @@ import business.organization.OrganizationDirectory;
 
 /**
  *
- * @author Tanvi
+ * @author indap.n
  */
 public abstract class Enterprise extends Organization {
-    public EnterpriseType enterpriseType;
-    private OrganizationDirectory organizationDirectory;
 
-    Object getName() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    private EnterpriseType enterpriseType;
+    private OrganizationDirectory organizationDirectory;
 
     public enum EnterpriseType {
 
@@ -74,5 +71,4 @@ public abstract class Enterprise extends Organization {
     public String toString() {
         return getName();
     }
-    
-}
+ }

@@ -11,8 +11,9 @@ import business.network.Network;
 import business.organization.Organization;
 import business.role.Role;
 import business.userAccount.UserAccount;
-import javax.swing.JPanel;
-import userInterface.ngo.ngoManager.NGOManagerWorkAreaJPanel;
+import presentation.ngo.manager.NGOManagerWorkAreaJPanel;
+
+import javax.swing.*;
 
 /**
  *

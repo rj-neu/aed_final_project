@@ -11,8 +11,9 @@ import business.network.Network;
 import business.organization.Organization;
 import business.role.Role;
 import business.userAccount.UserAccount;
-import javax.swing.JPanel;
-import userInterface.ngo.ngoAdmin.NGOAdminWorkAreaJPanel;
+import presentation.ngo.admin.AdminDashboardPanel;
+
+import javax.swing.*;
 
 /**
  *
@@ -26,7 +27,7 @@ public class NGOAdminRole extends Role {
 
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, Network network) {
-        return new NGOAdminWorkAreaJPanel(userProcessContainer, enterprise, business);
+        return new AdminDashboardPanel(userProcessContainer, enterprise, business);
     }
 
 }

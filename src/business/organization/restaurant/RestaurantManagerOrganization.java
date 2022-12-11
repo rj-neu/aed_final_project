@@ -6,8 +6,9 @@
 package business.organization.restaurant;
 
 import business.organization.Organization;
-import business.role.restaurant.RestaurantManagerRole;
 import business.role.Role;
+import business.role.restaurant.RestaurantManagerRole;
+
 import java.util.ArrayList;
 
 /**

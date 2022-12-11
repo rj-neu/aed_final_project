@@ -11,8 +11,9 @@ import business.network.Network;
 import business.organization.Organization;
 import business.role.Role;
 import business.userAccount.UserAccount;
-import javax.swing.JPanel;
-import userInterface.restaurant.restaurantWorker.RestaurantWorkerWorkAreaJPanel;
+import presentation.restaurant.worker.RestaurantWorkerWorkAreaJPanel;
+
+import javax.swing.*;
 
 /**
  *

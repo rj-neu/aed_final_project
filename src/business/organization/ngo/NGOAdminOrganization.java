@@ -8,6 +8,7 @@ package business.organization.ngo;
 import business.organization.Organization;
 import business.role.Role;
 import business.role.ngo.NGOAdminRole;
+
 import java.util.ArrayList;
 
 /**

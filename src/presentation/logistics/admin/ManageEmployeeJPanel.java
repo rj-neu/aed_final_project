@@ -9,14 +9,15 @@ import business.employee.Employee;
 import business.organization.Organization;
 import business.organization.OrganizationDirectory;
 import business.util.validation.Validation;
-import java.awt.CardLayout;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
+
+
+import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import java.awt.*;
 
 /**
  *
- * @author mites
+ * @author Rishabh
  */
 public class ManageEmployeeJPanel extends javax.swing.JPanel {
 

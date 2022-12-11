@@ -10,8 +10,9 @@ import business.enterprise.Enterprise;
 import business.network.Network;
 import business.organization.Organization;
 import business.userAccount.UserAccount;
-import javax.swing.JPanel;
-import userInterface.systemAdminWorkArea.SystemAdminWorkAreaJPanel;
+import presentation.system.SystemAdminWorkAreaJPanel;
+
+import javax.swing.*;
 
 /**
  *

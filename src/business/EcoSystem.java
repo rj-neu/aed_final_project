@@ -6,11 +6,12 @@
 package business;
 
 import business.enterprise.Enterprise;
-import business.role.Role;
-import business.organization.Organization;
 import business.network.Network;
+import business.organization.Organization;
+import business.role.Role;
 import business.role.SystemAdminRole;
 import business.userAccount.UserAccountDirectory;
+
 import java.util.ArrayList;
 
 /**

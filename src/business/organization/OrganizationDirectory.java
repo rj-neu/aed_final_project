@@ -5,18 +5,19 @@
  */
 package business.organization;
 
-import business.organization.restaurant.RestaurantAdminOrganization;
-import business.organization.restaurant.RestaurantWorkerOrganization;
-import business.organization.restaurant.RestaurantManagerOrganization;
-import business.organization.ngo.NGOWorkerOrganization;
-import business.organization.ngo.NGOManagerOrganization;
-import business.organization.ngo.NGOAdminOrganization;
-import business.organization.logistics.LogisticsManagerOrganization;
-import business.organization.logistics.LogisticsWorkerOrganization;
-import business.organization.logistics.LogisticsAdminOrganization;
 import business.organization.Organization.Type;
 import business.organization.government.GovernmentAdminOrganization;
 import business.organization.government.GovernmentMayorOrganization;
+import business.organization.logistics.LogisticsAdminOrganization;
+import business.organization.logistics.LogisticsManagerOrganization;
+import business.organization.logistics.LogisticsWorkerOrganization;
+import business.organization.ngo.NGOAdminOrganization;
+import business.organization.ngo.NGOManagerOrganization;
+import business.organization.ngo.NGOWorkerOrganization;
+import business.organization.restaurant.RestaurantAdminOrganization;
+import business.organization.restaurant.RestaurantManagerOrganization;
+import business.organization.restaurant.RestaurantWorkerOrganization;
+
 import java.util.ArrayList;
 
 /**

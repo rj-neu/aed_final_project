@@ -11,8 +11,9 @@ import business.network.Network;
 import business.organization.Organization;
 import business.role.Role;
 import business.userAccount.UserAccount;
-import javax.swing.JPanel;
-import userInterface.restaurant.adminWorkArea.RestaurantAdminWorkAreaJPanel;
+import presentation.restaurant.admin.AdminWorkAreaJPanel;
+
+import javax.swing.*;
 
 /**
  *
@@ -26,7 +27,7 @@ public class RestaurantAdminRole extends Role {
 
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, Network network) {
-        return new RestaurantAdminWorkAreaJPanel(userProcessContainer, enterprise, business);
+        return new AdminWorkAreaJPanel(userProcessContainer, enterprise, business);
     }
 
 }

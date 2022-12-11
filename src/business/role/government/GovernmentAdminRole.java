@@ -11,8 +11,9 @@ import business.network.Network;
 import business.organization.Organization;
 import business.role.Role;
 import business.userAccount.UserAccount;
-import javax.swing.JPanel;
-import presentation.logistics.admin.AdminWorkAreaJPanel;
+import presentation.government.admin.AdminDashboardJPanel;
+
+import javax.swing.*;
 
 /**
  *
@@ -26,7 +27,7 @@ public class GovernmentAdminRole extends Role {
 
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, Network network) {
-        return new AdminWorkAreaJPanel(userProcessContainer, enterprise);
+        return new AdminDashboardJPanel(userProcessContainer, enterprise);
     }
 
 }

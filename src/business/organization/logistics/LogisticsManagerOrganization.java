@@ -8,6 +8,7 @@ package business.organization.logistics;
 import business.organization.Organization;
 import business.role.Role;
 import business.role.logistics.LogisticsManagerRole;
+
 import java.util.ArrayList;
 
 /**

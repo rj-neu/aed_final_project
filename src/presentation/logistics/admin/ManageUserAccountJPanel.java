@@ -11,15 +11,15 @@ import business.organization.Organization;
 import business.role.Role;
 import business.userAccount.UserAccount;
 import business.util.validation.Validation;
-import java.awt.CardLayout;
-import java.awt.Color;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
+
+
+import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import java.awt.*;
 
 /**
  *
- * @author mites
+ * @author Rishabh
  */
 public class ManageUserAccountJPanel extends javax.swing.JPanel {
 
