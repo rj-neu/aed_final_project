@@ -19,11 +19,11 @@ public class App {
 
 
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("./resources/Beans.xml");
-
-        UserDaoImpl userDao = (UserDaoImpl) context.getBean("userDao");
-
-        userDao.create(new User("Orijit", "12456789", "ori@gmail.com", Gender.MALE, Role.LOGISTIC_MANAGER, new Date()));
+//        ApplicationContext context = new ClassPathXmlApplicationContext("./resources/Beans.xml");
+//
+//        UserDaoImpl userDao = (UserDaoImpl) context.getBean("userDao");
+//
+//        userDao.create(new User("Orijit", "12456789", "ori@gmail.com", Gender.MALE, Role.LOGISTIC_MANAGER, new Date()));
 
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
             public void run() {

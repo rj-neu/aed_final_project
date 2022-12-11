@@ -44,7 +44,7 @@ public class LoginNewJPanel extends javax.swing.JFrame implements Runnable {
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         setSize((int) (screenSize.width / 1.3), (int) (screenSize.height / 1.3));
         setLocationRelativeTo(null);
-        setResizable(false);
+        setResizable(true);
         setVisible(true);
 
         System.out.println((int) screenSize.width / 1.3);
@@ -89,7 +89,7 @@ public class LoginNewJPanel extends javax.swing.JFrame implements Runnable {
         loginPanel.setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel1.setText("Email:");
+        jLabel1.setText("Username:");
         loginPanel.add(jLabel1);
         jLabel1.setBounds(223, 186, 37, 17);
         loginPanel.add(emailTextField);

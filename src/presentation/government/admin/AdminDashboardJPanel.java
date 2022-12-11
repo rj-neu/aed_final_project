@@ -116,7 +116,7 @@ public class AdminDashboardJPanel extends javax.swing.JPanel {
                         .addComponent(btnManageEmployee)))
                 .addGap(25, 25, 25)
                 .addComponent(btnManageUser)
-                .addContainerGap(65, Short.MAX_VALUE))
+                .addContainerGap(503, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

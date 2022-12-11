@@ -5,9 +5,12 @@
  */
 package presentation.logistics.worker;
 
+import business.DB4OUtil.DB4OUtil;
+import business.EcoSystem;
 import business.enterprise.Enterprise;
 import business.network.Network;
 import business.userAccount.UserAccount;
+import presentation.login.LoginNewJPanel;
 
 
 import javax.swing.*;
@@ -26,9 +29,13 @@ public class WorkerDashboardJPanel extends javax.swing.JPanel {
     private UserAccount account;
     private Enterprise enterprise;
     private Network network;
+    private DB4OUtil db4OUtil;
+    public EcoSystem system;
 
     public WorkerDashboardJPanel(JPanel userProcessContainer, UserAccount account, Enterprise enterprise, Network network) {
         initComponents();
+        db4OUtil = DB4OUtil.getInstance();
+        system = db4OUtil.retrieveSystem();
         this.userProcessContainer = userProcessContainer;
         this.account = account;
         this.enterprise = enterprise;
@@ -50,7 +57,7 @@ public class WorkerDashboardJPanel extends javax.swing.JPanel {
         btnDelivery = new javax.swing.JButton();
         lblHeading = new javax.swing.JLabel();
         lblEnterprise = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        logoutBtn = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 204));
 
@@ -84,10 +91,15 @@ public class WorkerDashboardJPanel extends javax.swing.JPanel {
         lblEnterprise.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
         lblEnterprise.setText("Welcome");
 
-        jLabel2.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 51, 51));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentation/res/shutdown.png"))); // NOI18N
-        jLabel2.setText("Logout");
+        logoutBtn.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        logoutBtn.setForeground(new java.awt.Color(255, 0, 0));
+        logoutBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentation/res/shutdown.png"))); // NOI18N
+        logoutBtn.setText("Logout");
+        logoutBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logoutBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -97,20 +109,21 @@ public class WorkerDashboardJPanel extends javax.swing.JPanel {
                 .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblEnterprise)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblName, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addComponent(lblHeading, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel2)))
-                .addGap(31, 31, 31))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(84, 84, 84)
-                .addComponent(btnDelivery, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(72, 72, 72)
-                .addComponent(btnPickup, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(105, Short.MAX_VALUE))
+                        .addComponent(logoutBtn)
+                        .addGap(25, 25, 25))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnDelivery, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(34, 34, 34)
+                                .addComponent(btnPickup, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblEnterprise)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lblName, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(786, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -118,7 +131,7 @@ public class WorkerDashboardJPanel extends javax.swing.JPanel {
                 .addGap(22, 22, 22)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblHeading, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
+                    .addComponent(logoutBtn))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblEnterprise, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -147,13 +160,24 @@ public class WorkerDashboardJPanel extends javax.swing.JPanel {
 
     }//GEN-LAST:event_btnPickupActionPerformed
 
+    private void logoutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutBtnActionPerformed
+        // TODO add your handling code here:
+        userProcessContainer.removeAll();
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        LoginNewJPanel mpjp = new LoginNewJPanel();
+        userProcessContainer.add("LoginPanel", mpjp);
+        layout.next(userProcessContainer);
+
+        db4OUtil.storeSystem(system);
+    }//GEN-LAST:event_logoutBtnActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnDelivery;
     private javax.swing.JButton btnPickup;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblEnterprise;
     private javax.swing.JLabel lblHeading;
     private javax.swing.JLabel lblName;
+    private javax.swing.JButton logoutBtn;
     // End of variables declaration//GEN-END:variables
 }

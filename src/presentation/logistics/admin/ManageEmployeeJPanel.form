@@ -51,29 +51,29 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="lblOrg" min="-2" max="-2" attributes="0"/>
-                              <Component id="jScrollPane" alignment="0" pref="480" max="32767" attributes="0"/>
-                              <Component id="cmbOrg" alignment="0" max="32767" attributes="0"/>
-                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="lblOrg" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="lblOrgCreate" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="cmbOrgCreate" min="-2" pref="216" max="-2" attributes="0"/>
+                                      <Component id="cmbOrgCreate" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="lblName" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="txtName" max="32767" attributes="0"/>
-                                          <Component id="btnCreateEmployee" max="32767" attributes="0"/>
+                                          <Component id="btnCreateEmployee" pref="390" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
+                                  <Component id="cmbOrg" alignment="0" min="-2" pref="225" max="-2" attributes="0"/>
                               </Group>
+                              <Component id="jScrollPane" min="-2" pref="1112" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace pref="510" max="32767" attributes="0"/>
+                  <EmptySpace pref="146" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -103,7 +103,7 @@
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="btnCreateEmployee" min="-2" pref="41" max="-2" attributes="0"/>
-                  <EmptySpace pref="195" max="32767" attributes="0"/>
+                  <EmptySpace pref="351" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
