@@ -11,12 +11,13 @@ import business.network.Network;
 import business.organization.Organization;
 import business.role.Role;
 import business.userAccount.UserAccount;
-import javax.swing.JPanel;
-import presentation.logistics.worker.WorkerWorkAreaJPanel;
+import presentation.logistics.worker.WorkerDashboardJPanel;
+
+import javax.swing.*;
 
 /**
  *
- * @author indap.n
+ * @author Rishabh
  */
 public class LogisticsWorkerRole extends Role {
 
@@ -26,7 +27,7 @@ public class LogisticsWorkerRole extends Role {
 
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, Network network) {
-        return new WorkerWorkAreaJPanel(userProcessContainer, account, enterprise, network);
+        return new WorkerDashboardJPanel(userProcessContainer, account, enterprise, network);
     }
 
 }
