@@ -54,8 +54,8 @@ public class NGORestaurantRequestViewJPanel extends javax.swing.JPanel {
         lblCostVal = new javax.swing.JLabel();
         jScrollPane = new javax.swing.JScrollPane();
         tblRequestDetails = new javax.swing.JTable();
-        btnBack = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        btnBack1 = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 153, 153));
 
@@ -111,61 +111,62 @@ public class NGORestaurantRequestViewJPanel extends javax.swing.JPanel {
             tblRequestDetails.getColumnModel().getColumn(2).setResizable(false);
         }
 
-        btnBack.setText("<<BACK");
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentation/ngo/manager/res/file.png"))); // NOI18N
+
+        btnBack1.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        btnBack1.setForeground(new java.awt.Color(51, 51, 255));
+        btnBack1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentation/res/back-button.png"))); // NOI18N
+        btnBack1.setText("Back");
+        btnBack1.setBorder(null);
+        btnBack1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
+                btnBack1ActionPerformed(evt);
             }
         });
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/ngo/manager/res/file.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(78, 78, 78)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
+                        .addComponent(jScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 733, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 475, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(0, 105, Short.MAX_VALUE)
-                                .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 368, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37))
+                                .addGap(116, 116, 116)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblRequestDateVal)
+                                    .addComponent(lblRequestFromVal)))
+                            .addComponent(lblRequestFrom)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblCost)
+                                .addGap(47, 47, 47)
+                                .addComponent(lblCostVal))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(116, 116, 116)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(lblRequestDateVal)
-                                            .addComponent(lblRequestFromVal)))
-                                    .addComponent(btnBack)
-                                    .addComponent(lblRequestFrom)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(lblCost)
-                                        .addGap(47, 47, 47)
-                                        .addComponent(lblCostVal))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                    .addComponent(lblRequestStatus)
-                                                    .addGap(26, 26, 26))
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addComponent(lblRequestDate)
-                                                    .addGap(35, 35, 35)))
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                .addComponent(lblQuantity)
-                                                .addGap(33, 33, 33)))
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(lblQuantityVal)
-                                            .addComponent(lblRequestStatusVal))))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(78, 78, 78)
-                        .addComponent(jScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                            .addComponent(lblRequestStatus)
+                                            .addGap(26, 26, 26))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(lblRequestDate)
+                                            .addGap(35, 35, 35)))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addComponent(lblQuantity)
+                                        .addGap(33, 33, 33)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblQuantityVal)
+                                    .addComponent(lblRequestStatusVal)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnBack1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 368, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -173,15 +174,17 @@ public class NGORestaurantRequestViewJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(34, 34, 34)
-                        .addComponent(lblHeader)
-                        .addGap(29, 29, 29)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblRequestFrom)
-                            .addComponent(lblRequestFromVal)))
-                    .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(34, 34, 34)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnBack1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblHeader))))
+                .addGap(26, 26, 26)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblRequestFrom)
+                    .addComponent(lblRequestFromVal))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblRequestDate)
@@ -198,24 +201,22 @@ public class NGORestaurantRequestViewJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblCost)
                     .addComponent(lblCostVal))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
-                .addComponent(btnBack)
-                .addContainerGap(58, Short.MAX_VALUE))
+                .addGap(40, 40, 40)
+                .addComponent(jScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(218, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-        // TODO add your handling code here:
+    private void btnBack1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBack1ActionPerformed
+
         userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_btnBackActionPerformed
+    }//GEN-LAST:event_btnBack1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnBack1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane;
     private javax.swing.JLabel lblCost;
