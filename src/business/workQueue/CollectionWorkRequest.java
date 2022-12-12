@@ -27,6 +27,7 @@ public class CollectionWorkRequest extends WorkRequest {
     private double deliveryCost;
     private boolean paid;
     private boolean invoiceGenerated;
+    private String location;
 
     public CollectionWorkRequest() {
         requestItems = new ArrayList();
@@ -123,6 +124,15 @@ public class CollectionWorkRequest extends WorkRequest {
     public void addRequestItem(String food, int quantity, int hoursToPerish) {
         RequestItem ri = new RequestItem(food, quantity, hoursToPerish);
         requestItems.add(ri);
+    }
+
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
     }
 
     public void updatePerishable() {

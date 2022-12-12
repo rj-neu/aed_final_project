@@ -104,6 +104,11 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         btnBack2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentation/res/back-button.png"))); // NOI18N
         btnBack2.setText("Back");
         btnBack2.setBorder(null);
+        btnBack2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBack2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -179,6 +184,13 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         txtName.setText("");
         populateNetworkTable();
     }//GEN-LAST:event_btnAddNetworkActionPerformed
+
+    private void btnBack2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBack2ActionPerformed
+        // TODO add your handling code here:
+        userProcessContainer.remove(this);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
+    }//GEN-LAST:event_btnBack2ActionPerformed
 
     public void populateNetworkTable() {
         DefaultTableModel dtm = (DefaultTableModel) tblNetwork.getModel();

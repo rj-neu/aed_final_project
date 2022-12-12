@@ -91,7 +91,7 @@ public class LoginNewJPanel extends javax.swing.JFrame implements Runnable {
         jLabel1.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         jLabel1.setText("Username:");
         loginPanel.add(jLabel1);
-        jLabel1.setBounds(223, 186, 37, 17);
+        jLabel1.setBounds(223, 186, 80, 17);
         loginPanel.add(emailTextField);
         emailTextField.setBounds(223, 209, 256, 23);
 

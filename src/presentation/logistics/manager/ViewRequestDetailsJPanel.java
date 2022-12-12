@@ -58,6 +58,7 @@ public class ViewRequestDetailsJPanel extends javax.swing.JPanel {
         lblRequestFromVal.setText(cwr.getRaisedByRestaurant());
         lblRequestDateVal.setText(cwr.getRequestDate() + "");
         lblQuantityVal.setText(cwr.getTotalQuantity() + " pounds");
+        lcoationPickup.setText(cwr.getLocation());
 
         String emp = cwr.getDeliveredBy() == null ? "Undelivered" : cwr.getDeliveredBy().getEmployee().getName();
         lblPickedUpByVal.setText(emp);
@@ -87,6 +88,8 @@ public class ViewRequestDetailsJPanel extends javax.swing.JPanel {
         lblPickedUpBy = new javax.swing.JLabel();
         lblPickedUpByVal = new javax.swing.JLabel();
         lblHeading = new javax.swing.JLabel();
+        lblCost1 = new javax.swing.JLabel();
+        lcoationPickup = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 204));
 
@@ -155,6 +158,11 @@ public class ViewRequestDetailsJPanel extends javax.swing.JPanel {
         lblHeading.setForeground(new java.awt.Color(0, 102, 255));
         lblHeading.setText("Work Request Details");
 
+        lblCost1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblCost1.setText("Pickup Location:");
+
+        lcoationPickup.setText("$10");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -162,6 +170,10 @@ public class ViewRequestDetailsJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblCost1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lcoationPickup))
                     .addComponent(jScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 685, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(lblCost)
@@ -224,9 +236,13 @@ public class ViewRequestDetailsJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblCost)
                     .addComponent(lblCostVal))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(219, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblCost1)
+                    .addComponent(lcoationPickup))
+                .addGap(47, 47, 47)
+                .addComponent(jScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 446, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(71, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -242,6 +258,7 @@ public class ViewRequestDetailsJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnBack;
     private javax.swing.JScrollPane jScrollPane;
     private javax.swing.JLabel lblCost;
+    private javax.swing.JLabel lblCost1;
     private javax.swing.JLabel lblCostVal;
     private javax.swing.JLabel lblHeading;
     private javax.swing.JLabel lblPickedUpBy;
@@ -254,6 +271,7 @@ public class ViewRequestDetailsJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblRequestFromVal;
     private javax.swing.JLabel lblRequestStatus;
     private javax.swing.JLabel lblRequestStatusVal;
+    private javax.swing.JLabel lcoationPickup;
     private javax.swing.JTable tblDetails;
     // End of variables declaration//GEN-END:variables
 }
