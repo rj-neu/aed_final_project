@@ -8,3 +8,12 @@ Our application provides a way to bridge the gap between the wastage and deficit
 - These logistics companies then pick up the requested item from the restaurant and deliver it to the requested NGO.
 - NGOs can also request that other NGOs in the network direct restaurant requests to the specific NGO that is experiencing inventory shortages.
 - Logistics charges the requesting NGO for the deliveries, sending them invoices that are then paid for by the NGO. A mayor can view all the activities.
+
+
+# Object Model Diagram
+![](https://github.com/rj-neu/aed_final_project/blob/main/object-model.jpeg?raw=true)
+
+
+
+# UML Class Diagram
+![](https://github.com/rj-neu/aed_final_project/blob/main/Class_UML.drawio.jpeg?raw=true)

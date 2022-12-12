@@ -5,6 +5,7 @@
  */
 package presentation.ngo.worker;
 
+import business.DB4OUtil.DB4OUtil;
 import business.EcoSystem;
 import business.enterprise.Enterprise;
 import business.organization.Organization;
@@ -12,6 +13,7 @@ import business.userAccount.UserAccount;
 
 import javax.swing.*;
 import java.awt.*;
+import presentation.login.LoginNewJPanel;
 
 /**
  *
@@ -27,9 +29,13 @@ public class NGOWorkerWorkAreaJPanel extends javax.swing.JPanel {
     private Organization organization;
     private Enterprise enterprise;
     private EcoSystem business;
+    private DB4OUtil db4OUtil;
+    public EcoSystem system;
 
     public NGOWorkerWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business) {
         initComponents();
+        db4OUtil = DB4OUtil.getInstance();
+        system = db4OUtil.retrieveSystem();
         this.userProcessContainer = userProcessContainer;
         this.business = business;
         this.account = account;
@@ -51,53 +57,78 @@ public class NGOWorkerWorkAreaJPanel extends javax.swing.JPanel {
         btnUpdateInventory = new javax.swing.JButton();
         btnDistributeFood = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        logoutBtn = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 153, 153));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("NGO Worker WorkArea Panel");
 
+        btnViewInventory.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentation/ngo/manager/res/box.png"))); // NOI18N
         btnViewInventory.setText("View Inventory");
+        btnViewInventory.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnViewInventory.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         btnViewInventory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnViewInventoryActionPerformed(evt);
             }
         });
 
+        btnUpdateInventory.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentation/ngo/manager/res/moving-truck.png"))); // NOI18N
         btnUpdateInventory.setText("Pickup Delivery");
+        btnUpdateInventory.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnUpdateInventory.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         btnUpdateInventory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateInventoryActionPerformed(evt);
             }
         });
 
+        btnDistributeFood.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentation/ngo/manager/res/box (1).png"))); // NOI18N
         btnDistributeFood.setText("Distribute Food");
+        btnDistributeFood.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnDistributeFood.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         btnDistributeFood.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDistributeFoodActionPerformed(evt);
             }
         });
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/ngo/admin/res/management_user.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentation/ngo/admin/res/management_user.png"))); // NOI18N
+
+        logoutBtn.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        logoutBtn.setForeground(new java.awt.Color(255, 0, 0));
+        logoutBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentation/res/shutdown.png"))); // NOI18N
+        logoutBtn.setText("Logout");
+        logoutBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logoutBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(77, 77, 77)
+                .addGap(78, 78, 78)
+                .addComponent(btnUpdateInventory, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35)
+                .addComponent(btnDistributeFood, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(39, 39, 39)
+                .addComponent(btnViewInventory, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(600, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(95, 95, 95)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnUpdateInventory, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnDistributeFood, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnViewInventory, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(66, Short.MAX_VALUE))
+                        .addComponent(jLabel1))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(logoutBtn)
+                        .addGap(53, 53, 53))))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnDistributeFood, btnUpdateInventory, btnViewInventory});
@@ -107,17 +138,19 @@ public class NGOWorkerWorkAreaJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(57, 57, 57)
+                        .addComponent(logoutBtn)
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(34, 34, 34)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(35, 35, 35)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnUpdateInventory, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(76, 76, 76)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(61, 61, 61)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnDistributeFood)
-                    .addComponent(btnViewInventory))
-                .addContainerGap(102, Short.MAX_VALUE))
+                    .addComponent(btnUpdateInventory, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnViewInventory, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(430, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnDistributeFood, btnUpdateInventory, btnViewInventory});
@@ -148,6 +181,14 @@ public class NGOWorkerWorkAreaJPanel extends javax.swing.JPanel {
         layout.next(userProcessContainer);
     }//GEN-LAST:event_btnDistributeFoodActionPerformed
 
+    private void logoutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutBtnActionPerformed
+        // TODO add your handling code here:
+        CardLayout layout = (CardLayout) this.getParent().getLayout();
+        layout.previous(this.getParent());
+        this.getParent().remove(this);
+        db4OUtil.storeSystem(system);
+    }//GEN-LAST:event_logoutBtnActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnDistributeFood;
@@ -155,5 +196,6 @@ public class NGOWorkerWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnViewInventory;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton logoutBtn;
     // End of variables declaration//GEN-END:variables
 }

@@ -192,13 +192,20 @@ public class AdminDashboardJPanel extends javax.swing.JPanel {
 
     private void logoutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutBtnActionPerformed
         // TODO add your handling code here:
-        userProcessContainer.removeAll();
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        LoginNewJPanel mpjp = new LoginNewJPanel();
-        userProcessContainer.add("LoginPanel", mpjp);
-        layout.next(userProcessContainer);
 
+//        userProcessContainer.removeAll();
+
+//        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+//        LoginNewJPanel mpjp = new LoginNewJPanel();
+//        userProcessContainer.add("LoginPanel", mpjp);
+//        layout.next(userProcessContainer);
+
+
+        CardLayout layout = (CardLayout) this.getParent().getLayout();
+        layout.previous(this.getParent());
+        this.getParent().remove(this);
         db4OUtil.storeSystem(system);
+
     }//GEN-LAST:event_logoutBtnActionPerformed
 
     private void btnManageUserActionPerformed(java.awt.event.ActionEvent evt) {                                              
